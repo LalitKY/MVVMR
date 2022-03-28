@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FRR-et-kEv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="fvL-Uz-I34">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationController" id="XJs-Zf-epG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Glj-ZD-eaz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6Z-4T-snn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1133" y="-111"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Ldz-zb-spB">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="FRR-et-kEv" customClass="ViewController" customModule="MVVMR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FTK-is-nKP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HO5-js-PHr">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EmployeeTableViewCell" rowHeight="70" id="Hdv-b4-eXV" customClass="EmployeeTableViewCell" customModule="MVVMR" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="70"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hdv-b4-eXV" id="sbL-Zd-c8x">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFS-mq-dMb">
+                                                    <rect key="frame" x="25" y="11" width="364" height="21"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtA-yQ-Nkn">
+                                                    <rect key="frame" x="25" y="37" width="364" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="MIB-Rg-5Qz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="RFS-mq-dMb" secondAttribute="trailing" constant="5" id="0X0-F2-lTI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="GtA-yQ-Nkn" secondAttribute="trailing" constant="5" id="1VY-2E-Ook"/>
+                                                <constraint firstItem="GtA-yQ-Nkn" firstAttribute="top" secondItem="RFS-mq-dMb" secondAttribute="bottom" constant="5" id="8sc-Go-cvy"/>
+                                                <constraint firstItem="RFS-mq-dMb" firstAttribute="top" secondItem="sbL-Zd-c8x" secondAttribute="topMargin" id="M8C-ga-oPb"/>
+                                                <constraint firstItem="RFS-mq-dMb" firstAttribute="leading" secondItem="sbL-Zd-c8x" secondAttribute="leadingMargin" constant="5" id="V5w-gA-CAw"/>
+                                                <constraint firstItem="GtA-yQ-Nkn" firstAttribute="leading" secondItem="sbL-Zd-c8x" secondAttribute="leadingMargin" constant="5" id="aK2-nC-Smo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="employeeIdLabel" destination="RFS-mq-dMb" id="AHH-7h-WNL"/>
+                                            <outlet property="employeeNameLabel" destination="GtA-yQ-Nkn" id="qOe-rT-EJi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SbD-cR-7kf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HO5-js-PHr" firstAttribute="bottom" secondItem="SbD-cR-7kf" secondAttribute="bottom" id="3pP-2b-ed9"/>
+                            <constraint firstItem="HO5-js-PHr" firstAttribute="top" secondItem="SbD-cR-7kf" secondAttribute="top" id="Bhn-NN-7Tf"/>
+                            <constraint firstItem="HO5-js-PHr" firstAttribute="trailing" secondItem="SbD-cR-7kf" secondAttribute="trailing" id="rUD-qc-ojp"/>
+                            <constraint firstItem="HO5-js-PHr" firstAttribute="leading" secondItem="SbD-cR-7kf" secondAttribute="leading" id="u5Y-m7-GVB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WT9-id-TtN"/>
+                    <connections>
+                        <outlet property="employeeTableView" destination="HO5-js-PHr" id="JUl-kD-lDJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JnI-fx-YQU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="384" y="43"/>
+        </scene>
+        <!--EmployeeDetailViewController-->
+        <scene sceneID="3b0-9W-4Dy">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qSa-36-3Pg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="EmployeeDetailViewController" title="EmployeeDetailViewController" id="Qdq-lR-oEA" customClass="EmployeeDetailViewController" customModule="MVVMR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="liH-Ca-Ccj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EmpID: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOV-3T-Our">
+                                <rect key="frame" x="32" y="142" width="350" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EmpName:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ6-ae-lwI">
+                                <rect key="frame" x="32" y="194.5" width="350" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SLw-W2-pHS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mOV-3T-Our" firstAttribute="leading" secondItem="SLw-W2-pHS" secondAttribute="leading" constant="32" id="09P-pR-d23"/>
+                            <constraint firstItem="SLw-W2-pHS" firstAttribute="trailing" secondItem="DZ6-ae-lwI" secondAttribute="trailing" constant="32" id="1dm-vJ-RVI"/>
+                            <constraint firstItem="SLw-W2-pHS" firstAttribute="trailing" secondItem="mOV-3T-Our" secondAttribute="trailing" constant="32" id="3lp-tN-SVY"/>
+                            <constraint firstItem="DZ6-ae-lwI" firstAttribute="top" secondItem="mOV-3T-Our" secondAttribute="bottom" constant="32" id="D2Q-8c-mcJ"/>
+                            <constraint firstItem="mOV-3T-Our" firstAttribute="top" secondItem="SLw-W2-pHS" secondAttribute="top" constant="98" id="WI6-ho-5V0"/>
+                            <constraint firstItem="DZ6-ae-lwI" firstAttribute="leading" secondItem="SLw-W2-pHS" secondAttribute="leading" constant="32" id="uHN-Ra-Knf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="employeesIdLabel" destination="mOV-3T-Our" id="hIl-ug-3pV"/>
+                        <outlet property="employeesNameLabel" destination="DZ6-ae-lwI" id="twp-m4-ehl"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1067" y="54"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
